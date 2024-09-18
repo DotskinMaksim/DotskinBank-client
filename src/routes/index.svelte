@@ -1,5 +1,5 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+	import cat from 'images/cat.jpg';
 </script>
 
 <style>
@@ -43,7 +43,7 @@
 <h1>Tere tulemast!</h1>
 
 <figure>
-	<img alt="Success Kid" src="{successkid}">
+	<img alt="Cat" src="{cat}">
 	<figcaption>Testing Sapper!</figcaption>
 </figure>
 
