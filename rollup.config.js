@@ -28,10 +28,11 @@ export default {
 				targets: [{
 					src: 'node_modules/bootstrap/dist/**/*',
 					dest: 'static/vendor/bootstrap'
-				}, {
-					src: 'node_modules/jquery/dist/**/*',
-					dest: 'static/vendor/jquery'
-				}]
+				},
+					{
+						src: 'node_modules/jquery/dist/**/*',
+						dest: 'static/vendor/jquery'
+					}]
 			}),
 			replace({
 				preventAssignment: true,
