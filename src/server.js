@@ -5,32 +5,28 @@ import session from 'express-session';
 import sessionFileStore from 'session-file-store';
 import * as sapper from '@sapper/server';
 
-const {json} = require('body-parser');
-
+const { json } = require('body-parser');
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
-const FileStore = new sessionFileStore(session);
-
+const FileStore = new sessionFileStore(session);// faili salvestamine
 polka() // You can also use Express
 	.use(
 		compression({ threshold: 0 }),
-
 		json(),
 		session({
-			secret:'iiiirrrr',
+			secret: 'iiiirrrr', //suvaline EI tohi githubi panna
 			resave: true,
 			saveUninitialized: true,
-			cookie:{
-				maxAge:31536000
+			cookie: {
+				maxAge: 31536000
 			},
 			store: new FileStore({
-				path: '.sessions'
+				path: `.sessions`
 			})
 		}),
-
 		sirv('static', { dev }),
 		sapper.middleware({
-			session: req =>({
+			session: req => ({
 				user: req.session && req.session.user
 			})
 
