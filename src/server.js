@@ -1,9 +1,9 @@
 import sirv from 'sirv';
 import polka from 'polka';
 import compression from 'compression';
-import session from 'express-session';
-import sessionFileStore from 'session-file-store';
 import * as sapper from '@sapper/server';
+import session from 'express-session';
+import sessionFileStore from 'session-file-store'; // npm install session-file-store
 
 const { json } = require('body-parser');
 const { PORT, NODE_ENV } = process.env;
@@ -29,7 +29,6 @@ polka() // You can also use Express
 			session: req => ({
 				user: req.session && req.session.user
 			})
-
 		})
 	)
 	.listen(PORT, err => {
