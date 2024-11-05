@@ -1,5 +1,5 @@
-import * as sapper from '@sapper/app';
+import * as sapper from '@sapper/app'; // Sapperi rakenduse impordimine
 
-sapper.start({
-	target: document.querySelector('#sapper')
+sapper.start({ // Sapperi rakenduse käivitamine
+	target: document.querySelector('#sapper') // Määratakse sihtkoht, kuhu rakendus paigaldatakse
 });

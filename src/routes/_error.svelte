@@ -1,8 +1,8 @@
 <script>
-	export let status;
-	export let error;
+	export let status; // Ekspordib statusi muutujat
+	export let error; // Ekspordib errori muutujat
 
-	const dev = process.env.NODE_ENV === 'development';
+	const dev = process.env.NODE_ENV === 'development'; // Kontrollib, kas rakendus on arendusrežiimis
 </script>
 
 <style>
@@ -12,8 +12,8 @@
 
 	h1 {
 		font-size: 2.8em;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
+	font-weight: 700;
+	margin: 0 0 0.5em 0;
 	}
 
 	p {
@@ -21,9 +21,9 @@
 	}
 
 	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
+	h1 {
+		font-size: 4em;
+	}
 	}
 </style>
 

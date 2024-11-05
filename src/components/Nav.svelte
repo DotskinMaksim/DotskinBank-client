@@ -3,11 +3,15 @@
 
 	import { goto, stores } from '@sapper/app';
 	import { post } from 'utils.js';
-	const { page, session} = stores();
+	const { page, session } = stores();
 
+	// Log out funktsioon
 	async function logout() {
+		// Teeb POST päringu autentsuse väljalogimiseks
 		await post(`auth/logout`);
+		// Seab sessiooni tokeni nulliks
 		$session.token = null;
+		// Suunab kasutaja peamise lehe juurde
 		goto('/');
 	}
 </script>
@@ -18,7 +22,6 @@
 		font-weight: 300;
 		padding: 0 1em;
 	}
-
 
 	ul {
 		margin: 0;
