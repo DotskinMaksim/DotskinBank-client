@@ -10,6 +10,12 @@ export function post(req, res) {
         if (response.token) req.session.token = response.token;
         res.setHeader('Content-Type', 'application/json'); // Seab vastuse päise, et näidata, et vastus on JSON
 
+<<<<<<< HEAD
         res.end(JSON.stringify(response)); // Saadetakse JSON-vastus kliendile
+=======
+        res.end(JSON.stringify(response));
+
+        console.log("token: "+response.token);
+>>>>>>> #188525805-As-a-user-I-see-an-overview-page-when-I-log-on
     });
 }
