@@ -44,11 +44,8 @@
                     <fieldset class="form-group">
                         <input class="form-control form-control-lg" type="password" required placeholder="Password"
                                bind:value={password}>
-                        {#if password.length > 1 && password.length < 6 }<sup>
-                            <div class="alert alert-danger" role="alert">Password to short</div>
-                        </sup>{/if}
-                    </fieldset>
-                    <button class="btn btn-lg btn-primary pull-xs-right" disabled="{password.length < 6}">                        Sign up
+                        {#if password.length > 1 && password.length < 6}<sup><div class="alert alert-danger" role="alert">Password too short</div></sup>{/if}
+н                    <button class="btn btn-lg btn-primary pull-xs-right" disabled="{password.length < 6}">                        Sign up
                     </button>
                 </form>
             </div>
